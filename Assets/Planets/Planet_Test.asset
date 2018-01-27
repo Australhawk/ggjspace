@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetName: Earth
   planetRadius: 10
-  material: {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
+  material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   planetMass: 100

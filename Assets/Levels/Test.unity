@@ -152,12 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114415607674054898, guid: 667499e7dc24f4563b2057195b760b7d,
-        type: 2}
-      propertyPath: planetObject
-      value: 
-      objectReference: {fileID: 11400000, guid: f9ac109a8404145e199f30b19cc7dff9,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667499e7dc24f4563b2057195b760b7d, type: 2}
   m_IsPrefabParent: 0
@@ -236,7 +230,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1756991829}
   m_LocalRotation: {x: -0.0871723, y: 0.89959055, z: -0.21045254, w: -0.37262255}
-  m_LocalPosition: {x: 2.1889904, y: 1.5322931, z: 2.1889906}
+  m_LocalPosition: {x: 44.74448, y: 31.32113, z: 44.744484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -307,23 +301,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1955874538 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1534331719483276, guid: 667499e7dc24f4563b2057195b760b7d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1358502437}
---- !u!54 &1955874539
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1955874538}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
