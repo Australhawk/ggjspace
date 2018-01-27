@@ -34,6 +34,7 @@ public class RingController : MonoBehaviour {
         active = false;
         GameManager.instance.NextPlanet();
         this.GetComponent<Renderer>().material.color = Color.green;
+        FindObjectOfType<RingManager>().RingFinished(this);
     }
 
     public void PlanetEntered (Planet planet) {
