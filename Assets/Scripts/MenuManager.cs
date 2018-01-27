@@ -8,7 +8,8 @@ public class MenuManager : MonoBehaviour {
     //Used in the menu to update visuals.
     public Dropdown dropdown;
     public Slider slider;
-
+    public Slider calibrateSlider;
+    public InputField calibrateInput;
 
     // Use this for initialization
     void Start () {
@@ -21,10 +22,14 @@ public class MenuManager : MonoBehaviour {
     void FixedUpdate() {
         UpdateSlider();
     }
+    public void Calibrate() {
+        MicrophoneReader.setMaxValue(calibrateSlider.value);
+        calibrateInput.text = calibrateSlider.value.ToString();
+    }
 
     private void UpdateSlider() {
         if (dropdown != null && slider != null) {
-            int volume = MicrophoneInputManager.instance.MicrophoneReader.GetVolume();
+            float volume = MicrophoneInputManager.instance.MicrophoneReader.Volume;
             slider.value = volume;
             float r = 100 - volume;
             float g = volume;
@@ -56,5 +61,8 @@ public class MenuManager : MonoBehaviour {
     public void Play() {
 		MicrophoneInputManager.instance.UnloadUnusedMicrophones();
 		this.gameObject.SetActive (false);
+    }
+    public void SetSliderValue() {
+        calibrateSlider.value = float.Parse(calibrateInput.text);
     }
 }

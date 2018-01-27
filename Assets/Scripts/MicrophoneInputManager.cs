@@ -32,9 +32,8 @@ public class MicrophoneInputManager : MonoBehaviour {
     }
 
     public int GetPower() {
-        return microphoneReader.GetVolume();
+        return microphoneReader.Power;
     }
-
 
     /**
      * Starts all microphones in the mic_devices array and attaches them to a MicrophoneReader Object.
@@ -79,7 +78,7 @@ public class MicrophoneInputManager : MonoBehaviour {
         }
         Mic_readers = null;
     }
-
+    
     public string[] Mic_devices {
         get {
             return mic_devices;
