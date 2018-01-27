@@ -26,7 +26,6 @@ public class MicrophoneInputManager : MonoBehaviour {
 			mic_devices = Microphone.devices;
 			mic_count = mic_devices.Length;
 			mic_readers = new List<MicrophoneReader>();
-			InstantiateMicrophones(mic_devices);
 			DontDestroyOnLoad(this);
 		}
         
@@ -40,7 +39,8 @@ public class MicrophoneInputManager : MonoBehaviour {
     /**
      * Starts all microphones in the mic_devices array and attaches them to a MicrophoneReader Object.
      */
-    private void InstantiateMicrophones(string[] devices) {
+    internal void InstantiateMicrophones(string[] devices) {
+        Mic_readers.Clear();
         foreach (string device in devices) {
             MicrophoneReader mic = new MicrophoneReader(device);
             Debug.Log("Registered and starting microphone: " + device);
@@ -55,6 +55,9 @@ public class MicrophoneInputManager : MonoBehaviour {
         UpdateMicrophoneReader(0);
     }
 
+    internal void InstantiateMicrophones() {
+        InstantiateMicrophones(mic_devices);
+    }
 
     internal void UpdateMicrophoneReader(int value) {
         if (microphoneReader != null) {
@@ -104,6 +107,16 @@ public class MicrophoneInputManager : MonoBehaviour {
 
         set {
             mic_readers = value;
+        }
+    }
+
+    public MicrophoneReader MicrophoneReader {
+        get {
+            return microphoneReader;
+        }
+
+        set {
+            microphoneReader = value;
         }
     }
 }

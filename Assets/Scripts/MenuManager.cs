@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour {
 
     private void UpdateSlider() {
         if (dropdown != null && slider != null) {
-			int volume = MicrophoneInputManager.instance.Mic_readers[dropdown.value].GetVolume();
+            int volume = MicrophoneInputManager.instance.MicrophoneReader.GetVolume();
             slider.value = volume;
             float r = 100 - volume;
             float g = volume;
@@ -37,8 +37,9 @@ public class MenuManager : MonoBehaviour {
         if (dropdown != null) {
             dropdown.ClearOptions();
             List<string> mics = new List<string>();
-			mics.AddRange(MicrophoneInputManager.instance.Mic_devices);
+            mics.AddRange(MicrophoneInputManager.instance.Mic_devices);
             dropdown.AddOptions(mics);
+            MicrophoneInputManager.instance.InstantiateMicrophones();
         }
     }
 
