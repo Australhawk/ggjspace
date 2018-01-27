@@ -8,7 +8,7 @@ public class MicrophoneReader{
     private string device;
     private AudioClip audioClip;
     private int volume; //from 0 to 100
-    private bool playing = true;
+    private bool active;
 
     public const int MAX_VALUE = 30;
 
@@ -20,7 +20,7 @@ public class MicrophoneReader{
 
     public IEnumerator UpdateVolume() {
         //updates the volume
-        while (playing) {
+        while (active) {
 			if (audioClip) {
 				float[] samples = new float[audioClip.samples * audioClip.channels];
 				audioClip.GetData(samples, 0);
@@ -41,11 +41,13 @@ public class MicrophoneReader{
     }
 
     public bool StartMicrophone() {
+        active = true;
         audioClip = Microphone.Start(device, true, MIC_SEC_LENGTH, MIC_FREQ);
         return (audioClip != null);
     }
 
     public void StopMicrophone() {
+        active = false;
         Microphone.End(device);
     }
 
@@ -59,4 +61,13 @@ public class MicrophoneReader{
         }
     }
 
+    public bool Active {
+        get {
+            return active;
+        }
+
+        set {
+            active = value;
+        }
+    }
 }

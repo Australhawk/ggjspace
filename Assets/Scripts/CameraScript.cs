@@ -38,17 +38,15 @@ public class CameraScript : MonoBehaviour {
 	}
 
 	// Moves the camera towards the current selected planet
-	void FocusOnPlanet ()
-	{
+	void FocusOnPlanet() {
 		this.lastSelectedPlanet = this.currentSelectedPlanet;
 		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
 		Vector3 currentPlaceholderPosition = this.currentSelectedPlanet.GetComponent<Planet> ().planetPlaceholder.transform.position;
 		transform.position = currentSelectedPosition - currentPlaceholderPosition + new Vector3(cameraDistance,cameraHeight,cameraDistance);
 		transform.LookAt (currentSelectedPlanet.transform.position);
 	}
-
-	void FollowPlanet ()
-	{
+		
+	void FollowPlanet () {
 		Vector3 targetPosition = this.currentSelectedPlanet.transform.TransformPoint(new Vector3(horizontalBuffer, cameraDistance, cameraHeight));
 		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 		transform.eulerAngles = new Vector3(this.currentSelectedPlanet.transform.eulerAngles.x, 0, this.currentSelectedPlanet.transform.eulerAngles.z);
