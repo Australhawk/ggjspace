@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+
+
 	public void NextPlanet ()
 	{
 		Debug.Log ("PlanetCount:" +planets.Length);
