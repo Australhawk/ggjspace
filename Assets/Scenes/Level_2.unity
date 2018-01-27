@@ -152,6 +152,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1146713988346854, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
+      propertyPath: m_TagString
+      value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828269232112204, guid: 2c27dcf7f9faf4098b70233d4a186d3c,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 369157242}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
   m_IsPrefabParent: 0
@@ -225,6 +234,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667499e7dc24f4563b2057195b760b7d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &369157242 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114415607674054898, guid: 667499e7dc24f4563b2057195b760b7d,
+    type: 2}
+  m_PrefabInternal: {fileID: 369157241}
+  m_Script: {fileID: 11500000, guid: bd6c01f8246974d8eb43daeb8caa320c, type: 3}
 --- !u!1 &436993689 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1526077729337060, guid: 9896cda00723a6247b0c961a046eb0da,
@@ -327,6 +342,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667499e7dc24f4563b2057195b760b7d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &442307616 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114415607674054898, guid: 667499e7dc24f4563b2057195b760b7d,
+    type: 2}
+  m_PrefabInternal: {fileID: 442307615}
+  m_Script: {fileID: 11500000, guid: bd6c01f8246974d8eb43daeb8caa320c, type: 3}
 --- !u!1 &661036354 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1146713988346854, guid: 2c27dcf7f9faf4098b70233d4a186d3c,
@@ -529,6 +550,15 @@ Prefab:
       propertyPath: m_Name
       value: PlanetPlaceholder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1146713988346854, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
+      propertyPath: m_TagString
+      value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828269232112204, guid: 2c27dcf7f9faf4098b70233d4a186d3c,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 442307616}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
   m_IsPrefabParent: 0

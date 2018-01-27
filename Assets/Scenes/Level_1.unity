@@ -152,9 +152,35 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1146713988346854, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
+      propertyPath: m_TagString
+      value: Ring
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828269232112204, guid: 2c27dcf7f9faf4098b70233d4a186d3c,
+        type: 2}
+      propertyPath: planet
+      value: 
+      objectReference: {fileID: 369157242}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &256883873 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1990966165787142, guid: bf5a42f8c6bf48c499f330b78b7f6aa0,
+    type: 2}
+  m_PrefabInternal: {fileID: 2099968214}
+--- !u!114 &256883874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256883873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99138d8c7314c34fa806127388131e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rings: []
 --- !u!1001 &369157241
 Prefab:
   m_ObjectHideFlags: 0
@@ -208,6 +234,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 667499e7dc24f4563b2057195b760b7d, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &369157242 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114415607674054898, guid: 667499e7dc24f4563b2057195b760b7d,
+    type: 2}
+  m_PrefabInternal: {fileID: 369157241}
+  m_Script: {fileID: 11500000, guid: bd6c01f8246974d8eb43daeb8caa320c, type: 3}
 --- !u!1 &579977767 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1370249779724398, guid: 33d35eb474b68d64da56b534f55c088f,
