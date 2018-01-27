@@ -45,8 +45,9 @@ public class MicrophoneInputManager : MonoBehaviour {
             MicrophoneReader mic = new MicrophoneReader(device);
             mic_readers.Add(mic);
             Debug.Log("Registered and starting microphone: " + device);
-            mic.StartMicrophone();
-            StartCoroutine(mic.UpdateVolume());
+			// BUG
+            //mic.StartMicrophone();
+            //StartCoroutine(mic.UpdateVolume());
         }
     }
 

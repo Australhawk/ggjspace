@@ -49,6 +49,6 @@ public class MenuManager : MonoBehaviour {
 
     public void Play() {
 		MicrophoneInputManager.instance.UnloadUnusedMicrophones();
-        SceneManager.ChangeScene("Test");
+		this.gameObject.SetActive (false);
     }
 }
