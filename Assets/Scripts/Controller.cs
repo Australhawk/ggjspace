@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour {
 
+	public float force = 100f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,10 +13,16 @@ public class Controller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		float mouseX = Input.GetAxis ("Mouse X");
-		float mouseY = Input.GetAxis ("Mouse Y");
-		Debug.Log (mouseX);
-		Debug.Log (mouseY);
+		if (Input.GetButtonDown("NextPlanet")){
+			Debug.Log ("NextPlanet");
+			GameManager.instance.NextPlanet ();
+		}
+		else if(Input.GetButtonDown("PreviousPlanet")){
+			Debug.Log ("Previous");
+			GameManager.instance.PreviousPlanet ();
+		}
+		else if (Input.GetButton("AddForce")) {
+			GameManager.instance.currentPlanet.GetComponent<Planet> ().AddForce (force);
+		}
 	}
 }

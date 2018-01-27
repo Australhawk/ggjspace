@@ -32,6 +32,20 @@ public class Planet : MonoBehaviour {
 			}
 		}
 	}
+
+	public void AddForce (float force)
+	{
+		Debug.Log ("Adding Force");
+		Rigidbody rigidbody = GetComponent<Rigidbody> ();
+
+		RaycastHit hit;
+		Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width/2,Screen.height/2));
+		if (Physics.Raycast(ray, out hit)) {
+			Debug.Log ("Just Hit: "+hit.collider.gameObject.tag);
+			Debug.Log ("Adding Force at: " + hit.point + " to: " + Camera.main.transform.forward);
+			rigidbody.AddForceAtPosition (Camera.main.transform.forward*force,hit.point);
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {

@@ -566,7 +566,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -694,6 +694,7 @@ GameObject:
   - component: {fileID: 783943682}
   - component: {fileID: 783943685}
   - component: {fileID: 783943684}
+  - component: {fileID: 783943686}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -715,6 +716,7 @@ MonoBehaviour:
   playing: 0
   currentMicrophoneDevice: 
   currentPlanet: {fileID: 2125695808}
+  planets: []
 --- !u!4 &783943683
 Transform:
   m_ObjectHideFlags: 0
@@ -750,6 +752,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c544f3a399374458a1286d7cd8dc26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &783943686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 783943681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaffd8d3104a4269b64af77fa24d4b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedH: 2
 --- !u!1 &833555640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1133470491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,7 +1865,7 @@ Prefab:
         type: 2}
       propertyPath: planetObject
       value: 
-      objectReference: {fileID: 11400000, guid: 88cf4a46d960c4f219e5e2d673578864,
+      objectReference: {fileID: 11400000, guid: 40829ae466ba1473a8e8b4b286c34c09,
         type: 2}
     - target: {fileID: 114415607674054898, guid: 667499e7dc24f4563b2057195b760b7d,
         type: 2}
@@ -2083,11 +2097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraDistance: 10
   cameraHeight: 20
-  smoothTime: 0.1
-  speed: 3
-  horizontalBuffer: 0
-  rotation: {x: 0, y: 0, z: 0, w: 1}
-  yRotation: 0
+  cameraSpeed: 2
+  distance: 100
 --- !u!1 &1815483993
 GameObject:
   m_ObjectHideFlags: 0
