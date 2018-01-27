@@ -714,6 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playing: 0
   currentMicrophoneDevice: 
+  currentPlanet: {fileID: 2125695808}
 --- !u!4 &783943683
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,9 +1158,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 329901425}
+        m_MethodName: UpdateMicrophone
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1939,7 +1940,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 329901425}
         m_MethodName: UpdateDropDownValues
         m_Mode: 1
         m_Arguments:
@@ -2080,9 +2081,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0920ab8e2e44e7cbe22f52f0861568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSelectedPlanet: {fileID: 2118887013}
   cameraDistance: 10
   cameraHeight: 20
+  smoothTime: 0.1
+  speed: 3
+  horizontalBuffer: 0
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  yRotation: 0
 --- !u!1 &1815483993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,8 +2652,8 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2107876245}
---- !u!1 &2118887013 stripped
+--- !u!1 &2125695808 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1534331719483276, guid: 667499e7dc24f4563b2057195b760b7d,
     type: 2}
-  m_PrefabInternal: {fileID: 1692879098}
+  m_PrefabInternal: {fileID: 1358502437}
