@@ -5,7 +5,7 @@ using UnityEngine;
 public class RingManager : MonoBehaviour {
     public List<RingController> rings;
     // Use this for initialization
-    void Start() {
+    void OnSceneEnter() {
         RegisterRings();
     }
 
@@ -14,7 +14,12 @@ public class RingManager : MonoBehaviour {
 
     }
 
-    void RegisterRings() {
+    public void RegisterRings() {
+        if (this.rings==null) {
+            this.rings = new List<RingController>();
+        } else {
+            this.rings.Clear();
+        }
         GameObject[] rings = GameObject.FindGameObjectsWithTag("Ring");
         foreach (GameObject gameObject in rings) {
             RingController ring = gameObject.GetComponent<RingController>();

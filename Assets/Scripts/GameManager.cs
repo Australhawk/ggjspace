@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 	[HideInInspector]
@@ -23,14 +25,14 @@ public class GameManager : MonoBehaviour {
 			Destroy (this.gameObject);
 		}else{
 			instance = this;
-
-			DontDestroyOnLoad (this);
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad (this);
 		}
 	}
-	void Start(){
-		ListPlanets ();
-	}
-	void ListPlanets ()
+    private void Start() {
+        
+    }
+    void ListPlanets ()
 	{
 		planets = GameObject.FindGameObjectsWithTag ("Planet");
 		if (planets.Length > 0) {
@@ -66,5 +68,10 @@ public class GameManager : MonoBehaviour {
 			currentPlanet = planets [planetIndex];
 		}
 		Debug.Log ("Current Planet Index: " + planetIndex);
-	}
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        ListPlanets();
+        GetComponent<RingManager>().RegisterRings();
+    }
 }
