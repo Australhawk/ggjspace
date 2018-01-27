@@ -41,9 +41,10 @@ public class Planet : MonoBehaviour {
 		RaycastHit hit;
 		Ray ray = Camera.main.ScreenPointToRay(new Vector2(Screen.width/2,Screen.height/2));
 		if (Physics.Raycast(ray, out hit)) {
+			rigidbody.velocity = new Vector3(0,0,0);
 			Debug.Log ("Just Hit: "+hit.collider.gameObject.tag);
 			Debug.Log ("Adding Force at: " + hit.point + " to: " + Camera.main.transform.forward);
-			rigidbody.AddForceAtPosition (Camera.main.transform.forward*force,hit.point);
+			rigidbody.AddForceAtPosition (Camera.main.transform.forward*force,hit.point,ForceMode.VelocityChange);
 		}
 	}
 	
