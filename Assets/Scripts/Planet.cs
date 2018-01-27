@@ -7,6 +7,7 @@ public class Planet : MonoBehaviour {
     // Import ScriptableObject Data
     public PlanetObject planetObject;
     private bool finished;
+    private Vector3 velocity;
 
     // Use this for initialization
     void Start() {
