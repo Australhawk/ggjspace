@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-	public GameObject currentSelectedPlanet;
+	private GameObject currentSelectedPlanet;
 
 	private GameObject lastSelectedPlanet;
 	public float cameraDistance = 10f;
 	public float cameraHeight = 5f;
 
-	private Vector3 offset;
+	public float smoothTime = 0.1f;
+	public float speed = 3.0f;
+
+	public float horizontalBuffer = 0f;
+
+	private Vector3 velocity = Vector3.zero;
+
+	public Quaternion rotation = Quaternion.identity;
+
+	public float yRotation = 0.0f;
+
 	// Use this for initialization
 	void Start () {
-		
+		this.currentSelectedPlanet = GameManager.instance.currentPlanet;
 	}
 	
 	// Update is called once per frame
@@ -34,13 +44,13 @@ public class CameraScript : MonoBehaviour {
 		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
 		Vector3 currentPlaceholderPosition = this.currentSelectedPlanet.GetComponent<Planet> ().planetPlaceholder.transform.position;
 		transform.position = currentSelectedPosition - currentPlaceholderPosition + new Vector3(cameraDistance,cameraHeight,cameraDistance);
-		offset = transform.position - currentSelectedPosition;
 		transform.LookAt (currentSelectedPlanet.transform.position);
 	}
 
 	void FollowPlanet ()
 	{
-		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
-		transform.position = currentSelectedPosition + offset;
+		Vector3 targetPosition = this.currentSelectedPlanet.transform.TransformPoint(new Vector3(horizontalBuffer, cameraDistance, cameraHeight));
+		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+		transform.eulerAngles = new Vector3(this.currentSelectedPlanet.transform.eulerAngles.x, 0, this.currentSelectedPlanet.transform.eulerAngles.z);
 	}
 }

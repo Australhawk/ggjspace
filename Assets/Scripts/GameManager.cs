@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public string currentMicrophoneDevice;
 	public static GameManager instance;
-
+	public GameObject currentPlanet;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		// Create GameManager Instance or destroy if another one exists
 		if (instance != null) {
