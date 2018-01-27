@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faa80706bcd7466f972a072a4ab7df1, type: 3}
+  m_Name: Terroso
+  m_EditorClassIdentifier: 
+  planetName: Terroso
+  planetRadius: 150
+  texture: {fileID: 2800000, guid: f72ae180e12904e61a65a1686ec52d86, type: 3}
+  normalMap: {fileID: 2800000, guid: 3bfb1eb982a5e4e2fa53e10d953dc990, type: 3}
+  planetMass: 10
