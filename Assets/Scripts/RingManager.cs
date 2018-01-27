@@ -29,6 +29,8 @@ public class RingManager : MonoBehaviour {
         if (rings.Count < 1) {
             //WE FINISHED THE LEVEL!
             Debug.Log("LEVEL FINISHED :D");
+            GameManager.instance.level += 1;
+            SceneManager.ChangeScene("Level_" + GameManager.instance.level);
         }
     }
 }

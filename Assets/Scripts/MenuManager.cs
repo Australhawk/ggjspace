@@ -59,8 +59,10 @@ public class MenuManager : MonoBehaviour {
     }
 
     public void Play() {
+        GameManager.instance.level = 1;
 		MicrophoneInputManager.instance.UnloadUnusedMicrophones();
 		this.gameObject.SetActive (false);
+        SceneManager.ChangeScene("Level_1");
     }
     public void SetSliderValue() {
         calibrateSlider.value = float.Parse(calibrateInput.text);
