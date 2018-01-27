@@ -60,6 +60,16 @@ public class Planet : MonoBehaviour {
         }
     }
 
+    internal void Pause() {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        this.velocity = rigidbody.velocity;
+        rigidbody.velocity = Vector3.zero;
+    }
+    internal void Resume() {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.velocity = this.velocity;
+    }
+
 
 
     void OnTriggerEnter(Collider other) {
