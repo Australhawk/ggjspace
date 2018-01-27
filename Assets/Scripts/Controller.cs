@@ -24,5 +24,8 @@ public class Controller : MonoBehaviour {
 		else if (Input.GetButton("AddForce")) {
 			GameManager.instance.currentPlanet.GetComponent<Planet> ().AddForce (force);
 		}
+		if (Input.GetButtonDown ("Menu")) {
+			GameObject.Find ("Menu").GetComponent<MainMenu> ().Toggle ();
+		}
 	}
 }
