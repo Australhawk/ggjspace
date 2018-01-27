@@ -75,11 +75,11 @@ GameObject:
   - component: {fileID: 114275661342823094}
   m_Layer: 5
   m_Name: OptionsMenu
-  m_TagString: Untagged
+  m_TagString: Options
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1929784585512306
 GameObject:
   m_ObjectHideFlags: 0

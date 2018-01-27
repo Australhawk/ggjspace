@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 	public void Start(){
-		this.transform.Find("MainMenu").gameObject.SetActive (false);
-		this.transform.Find ("OptionsMenu").gameObject.SetActive (false);
-	}
+        GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
+    }
 	public void Toggle(){
-		GameObject ob = this.transform.Find("MainMenu").gameObject;
-		GameObject opt = this.transform.Find("OptionsMenu").gameObject;
-		if (ob) {
-			ob.SetActive (!ob.activeSelf);
-		} else {
-			this.transform.Find("MainMenu").gameObject.SetActive (true);
-		}
-		if (opt) {
-			opt.gameObject.SetActive (false);
-		}
+        GameObject ob = GameObject.Find("Menu");
+        if (ob) {
+            bool set = !ob.GetComponent<Canvas>().enabled;
+            ob.GetComponent<Canvas>().enabled = set;
+            GameManager.instance.playing = !set;
+        } else {
+            GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
+        }
 	}
-	public void Continue(){
-		GameObject.Find("MainMenu").gameObject.SetActive (false);
-		GameManager.instance.playing = true;
+	public void Continue() {
+        GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
+        GameManager.instance.playing = true;
 	}
-	public void Options(){
-		GameObject.Find("MainMenu").gameObject.SetActive (false);
-		this.transform.Find ("OptionsMenu").gameObject.SetActive (false);
-	}
-	public void Back(){
-		GameObject.Find("MainMenu").gameObject.SetActive (true);
-		GameObject.Find("OptionsMenu").gameObject.SetActive (false);
-	}
+	public void Options() {
+        Show(GameObject.Find("OptionsMenu").GetComponent<CanvasGroup>());
+        Hide(GameObject.Find("MainMenu").GetComponent<CanvasGroup>());
+        Hide(GameObject.Find("VolumeMenu").GetComponent<CanvasGroup>());
+    }
+    public void Volume() {
+
+    }
+
+	public void Back() {
+        Hide(GameObject.Find("OptionsMenu").GetComponent<CanvasGroup>());
+        Hide(GameObject.Find("VolumeMenu").GetComponent<CanvasGroup>());
+        Show(GameObject.Find("MainMenu").GetComponent<CanvasGroup>());
+    }
 	public void Quit(){
 		Application.Quit();
 	}
+    void Show(CanvasGroup canvasGroup) {
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+    }
+    void Hide(CanvasGroup canvasGroup) {
+        canvasGroup.alpha = 0f; //this makes everything transparent
+        canvasGroup.blocksRaycasts = false; //this prevents the UI element to receive input events
+    }
 }
