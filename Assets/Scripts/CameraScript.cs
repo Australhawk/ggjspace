@@ -28,8 +28,7 @@ public class CameraScript : MonoBehaviour {
 	}
 
 	// Moves the camera towards the current selected planet
-	void FocusOnPlanet ()
-	{
+	void FocusOnPlanet() {
 		this.lastSelectedPlanet = this.currentSelectedPlanet;
 		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
 		Vector3 currentPlaceholderPosition = this.currentSelectedPlanet.GetComponent<Planet> ().planetPlaceholder.transform.position;
@@ -38,8 +37,7 @@ public class CameraScript : MonoBehaviour {
 		transform.LookAt (currentSelectedPlanet.transform.position);
 	}
 
-	void FollowPlanet ()
-	{
+	void FollowPlanet() {
 		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
 		transform.position = currentSelectedPosition + offset;
 	}

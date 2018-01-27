@@ -47,6 +47,11 @@ public class MenuManager : MonoBehaviour {
 			MicrophoneInputManager.instance.Device = dropdown.itemText.text;
     }
 
+
+    public void UpdateMicrophone() {
+        MicrophoneInputManager.instance.UpdateMicrophoneReader(dropdown.value);
+    }
+
     public void Play() {
 		MicrophoneInputManager.instance.UnloadUnusedMicrophones();
 		this.gameObject.SetActive (false);

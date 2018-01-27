@@ -43,12 +43,27 @@ public class MicrophoneInputManager : MonoBehaviour {
     private void InstantiateMicrophones(string[] devices) {
         foreach (string device in devices) {
             MicrophoneReader mic = new MicrophoneReader(device);
-            mic_readers.Add(mic);
             Debug.Log("Registered and starting microphone: " + device);
-			// BUG
-            //mic.StartMicrophone();
-            //StartCoroutine(mic.UpdateVolume());
+            try {
+                mic.StartMicrophone();
+                mic_readers.Add(mic);
+            } catch (Exception e) {
+                Debug.LogError("WRONG MIC D:");
+            }
+            mic.StopMicrophone();
         }
+        UpdateMicrophoneReader(0);
+    }
+
+
+    internal void UpdateMicrophoneReader(int value) {
+        if (microphoneReader != null) {
+            microphoneReader.StopMicrophone();
+        }
+        microphoneReader = mic_readers[value];
+        microphoneReader.StartMicrophone();
+        Debug.Log("Setting default mic: " + microphoneReader.Device);
+        StartCoroutine(microphoneReader.UpdateVolume());
     }
 
     internal void UnloadUnusedMicrophones() {
