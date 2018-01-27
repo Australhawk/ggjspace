@@ -13,9 +13,10 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public GameObject[] planets;
 	private int planetIndex = 0;
+    internal int level;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
 
 		// Create GameManager Instance or destroy if another one exists
 		if (instance != null) {
@@ -36,6 +37,8 @@ public class GameManager : MonoBehaviour {
 			currentPlanet = planets [planetIndex];
 		}
 	}
+
+
 
 	public void NextPlanet ()
 	{
