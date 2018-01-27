@@ -4,8 +4,8 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlanetData", menuName = "Planet", order = 1)]
 public class PlanetObject : ScriptableObject {
-	public string planetName;
-	public float planetRadius;
-	public Material material;
-	public float planetMass;
+	public string planetName = "Earth";
+	public float planetRadius = 5;
+	public Texture texture;
+	public float planetMass = 10;
 }
