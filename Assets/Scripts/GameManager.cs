@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour {
 	public string currentMicrophoneDevice;
 	public static GameManager instance;
 	public GameObject currentPlanet;
+
+	[HideInInspector]
+	public GameObject[] planets;
+	private int planetIndex = 0;
+
 	// Use this for initialization
 	void Awake () {
 
@@ -17,12 +22,46 @@ public class GameManager : MonoBehaviour {
 			Destroy (this.gameObject);
 		}else{
 			instance = this;
+
 			DontDestroyOnLoad (this);
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Start(){
+		ListPlanets ();
+	}
+	void ListPlanets ()
+	{
+		planets = GameObject.FindGameObjectsWithTag ("Planet");
+		if (planets.Length > 0) {
+			currentPlanet = planets [planetIndex];
+		}
+	}
+
+	public void NextPlanet ()
+	{
+		Debug.Log ("PlanetCount:" +planets.Length);
+		if (planets.Length > 0) {
+			if (planetIndex >= planets.Length - 1) {
+				planetIndex = 0;
+			} else {
+				planetIndex++;
+			}
+			currentPlanet = planets [planetIndex];
+		}
+		Debug.Log ("Current Planet Index: " + planetIndex);
+	}
+
+	public void PreviousPlanet ()
+	{
+		Debug.Log ("PlanetCount:" +planets.Length);
+		if (planets.Length > 0) {
+			if (planetIndex == 0) {
+				planetIndex = planets.Length - 1;
+			} else {
+				planetIndex--;
+			}
+			currentPlanet = planets [planetIndex];
+		}
+		Debug.Log ("Current Planet Index: " + planetIndex);
 	}
 }
