@@ -13,11 +13,18 @@ public class Planet : MonoBehaviour {
 
 		// Set RigidbodyMass
 		Rigidbody rigidbody = GetComponent<Rigidbody>();
+		if (rigidbody == null) {
+			rigidbody = this.gameObject.AddComponent<Rigidbody> ();
+		}
 		if (rigidbody != null) {
-			rigidbody.mass = this.planetObject.planetMass;
+			if (this.planetObject) {
+				rigidbody.mass = this.planetObject.planetMass;
+			}
+			rigidbody.useGravity = false;
+			rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
 		}
 		// Set Planet Radius On Object and Placeholder
-		if (this.planetObject.planetRadius > 0f) {
+		if (this.planetObject && this.planetObject.planetRadius > 0f) {
 			float diameter = this.planetObject.planetRadius * 2f;
 			this.transform.localScale = new Vector3 (diameter, diameter, diameter);	
 			if (this.planetPlaceholder) {
@@ -29,6 +36,7 @@ public class Planet : MonoBehaviour {
 			GetComponent<Renderer> ().material.SetTexture ("_MainTex",this.planetObject.texture);
 			if (this.planetPlaceholder) {
 				this.planetPlaceholder.GetComponent<Renderer> ().material.SetTexture ("_MainTex",this.planetObject.texture);
+				this.planetPlaceholder.GetComponent<Renderer> ().material.SetTexture ("_BumpMap",this.planetObject.normalMap);
 			}
 		}
 	}

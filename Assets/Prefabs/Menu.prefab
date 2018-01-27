@@ -57,10 +57,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f266e3aff5f674853abe84475f6766b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
-  slider: {fileID: 0}
+  dropdown: {fileID: 114866350047606626, guid: b8476ce9cc17a49c5a8249ca2d87934d, type: 2}
+  slider: {fileID: 114740480986431912, guid: b8476ce9cc17a49c5a8249ca2d87934d, type: 2}
   calibrateSlider: {fileID: 0}
-  calibrateInput: {fileID: 0}
+  calibrateInput: {fileID: 114690885912084366, guid: b8476ce9cc17a49c5a8249ca2d87934d,
+    type: 2}
 --- !u!114 &114957553103359538
 MonoBehaviour:
   m_ObjectHideFlags: 1

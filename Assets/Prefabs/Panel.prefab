@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 224409366839029756}
   - component: {fileID: 222348730864972316}
   - component: {fileID: 114628194416142426}
+  - component: {fileID: 114118782921150190}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -464,6 +465,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &114118782921150190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1206683845152534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266e3aff5f674853abe84475f6766b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 114866350047606626}
+  slider: {fileID: 114740480986431912}
+  calibrateSlider: {fileID: 114740480986431912}
+  calibrateInput: {fileID: 114690885912084366}
 --- !u!114 &114175076727331266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1267,7 +1283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Option A
+  m_Text: Built-in Input
 --- !u!114 &114842894694101116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1339,11 +1355,17 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Built-in Input
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Built-in Microphone
       m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: Samson Meteor Mic
+      m_Image: {fileID: 0}
+    - m_Text: Soundflower (2ch)
+      m_Image: {fileID: 0}
+    - m_Text: Soundflower (64ch)
+      m_Image: {fileID: 0}
+    - m_Text: iShowU Audio Capture
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

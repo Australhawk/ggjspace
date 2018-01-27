@@ -33,28 +33,6 @@ public class CameraScript : MonoBehaviour {
 		}
 	}
 
-	void TestMethod() {
-		transform.LookAt (currentSelectedPlanet.transform);
-		var mousePosition = Input.mousePosition;
-		Vector3 pivot = this.currentSelectedPlanet.transform.position;
-		if (mousePosition.x < screenDistance) {
-			transform.RotateAround (pivot, Vector3.up, Mathf.Abs (mousePosition.x - screenDistance) / 100);
-		} else if (mousePosition.x > Screen.width - screenDistance) {
-			transform.RotateAround (pivot, Vector3.down, (mousePosition.x - Screen.width + screenDistance) / 100);
-		}
-	}
-	// Moves the camera towards the current selected planet
-	void FocusOnPlanet ()
-	{
-		this.lastSelectedPlanet = this.currentSelectedPlanet;
-		Vector3 currentSelectedPosition = this.currentSelectedPlanet.transform.position;
-		Vector3 currentPlaceholderPosition = this.currentSelectedPlanet.GetComponent<Planet> ().planetPlaceholder.transform.position;
-		Vector3 newPosition = (currentPlaceholderPosition - currentSelectedPosition).normalized * cameraDistance + currentSelectedPosition;
-		newPosition = new Vector3 (newPosition.x, cameraHeight, newPosition.z);
-		transform.position = newPosition;
-		transform.LookAt (currentSelectedPlanet.transform.position);
-	}
-
 	void FollowPlanet ()
 	{
 		Vector3 pivot = this.currentSelectedPlanet.transform.position;
