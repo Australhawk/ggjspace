@@ -11,6 +11,15 @@ public class MainMenu : MonoBehaviour {
         if (ob) {
             bool set = !ob.GetComponent<Canvas>().enabled;
             ob.GetComponent<Canvas>().enabled = set;
+            if (set) {
+                foreach(GameObject go in GameManager.instance.planets) {
+                    go.GetComponent<Planet>().Pause();
+                }
+            } else {
+                foreach (GameObject go in GameManager.instance.planets) {
+                    go.GetComponent<Planet>().Resume();
+                }
+            }
             GameManager.instance.playing = !set;
         } else {
             GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;

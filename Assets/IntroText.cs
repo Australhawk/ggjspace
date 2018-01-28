@@ -45,6 +45,6 @@ public class IntroText : MonoBehaviour {
 		text.text = "...gasp";
 		yield return new WaitForSeconds (2);
 		text.text = "";
-        SceneManager.ChangeScene("Menu");
+        SceneManager.ChangeScene("Level_1");
 	}
 }

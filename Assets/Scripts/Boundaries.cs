@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Boundaries : MonoBehaviour {
 
-	// Use this for initialization
+
+    // Use this for initialization
 	void Start () {
 		
 	}
@@ -18,7 +19,7 @@ public class Boundaries : MonoBehaviour {
     {
         if(other.gameObject.name == "Planet")
         {
-            DestroyObject(other.gameObject);
+            other.transform.position = other.GetComponent<Planet>().initialPos;
         }
     }
 }

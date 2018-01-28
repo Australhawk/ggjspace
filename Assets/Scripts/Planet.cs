@@ -5,12 +5,14 @@ using UnityEngine;
 public class Planet : MonoBehaviour {
 
     // Import ScriptableObject Data
+    public Vector3 initialPos;
     public PlanetObject planetObject;
     private bool finished;
     private Vector3 velocity;
-
+    
     // Use this for initialization
     void Start() {
+        initialPos = transform.position;
         finished = false;
         // Set RigidbodyMass
         Rigidbody rigidbody = GetComponent<Rigidbody>();
@@ -58,6 +60,16 @@ public class Planet : MonoBehaviour {
             Rigidbody rigidbody = GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
         }
+    }
+
+    internal void Pause() {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        this.velocity = rigidbody.velocity;
+        rigidbody.velocity = Vector3.zero;
+    }
+    internal void Resume() {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.velocity = this.velocity;
     }
 
 

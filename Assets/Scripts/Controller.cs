@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        GameManager.instance.playing = true;
 	}
 
     // Update is called once per frame

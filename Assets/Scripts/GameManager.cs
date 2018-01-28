@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public GameObject[] planets;
 	private int planetIndex = 0;
-    internal int level;
+    internal int level = 1;
 
     // Use this for initialization
     void Awake () {
