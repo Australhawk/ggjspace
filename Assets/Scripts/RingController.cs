@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RingController : MonoBehaviour {
@@ -32,12 +31,12 @@ public class RingController : MonoBehaviour {
         if (active) {
             float distance = Vector3.Distance(this.transform.position, planet.transform.position);
             if (distance < planet.planetObject.planetRadius) {
-                FinishPlanet();
+				StartCoroutine(FinishPlanet());
             }
         }
     }
 
-    private void FinishPlanet() {
+	IEnumerator FinishPlanet() {
         finished = true;
         planet.Finished = true;
         active = false;
@@ -45,9 +44,10 @@ public class RingController : MonoBehaviour {
 		sfx.time = 0.4f;
 		sfx.Play ();
 		this.animator.SetBool ("PlanetOnPosition", true);
-        GameManager.instance.NextPlanet();
 		this.PaintMaterial(Color.green);
-        FindObjectOfType<RingManager>().RingFinished(this);
+		yield return new WaitForSeconds(2);
+		FindObjectOfType<RingManager>().RingFinished(this);
+		GameManager.instance.NextPlanet();
     }
 	public void PlanetEntered (Planet planet) {
         if (this.planet.Equals(planet)) {
