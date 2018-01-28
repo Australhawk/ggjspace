@@ -46,7 +46,6 @@ public class CameraScript : MonoBehaviour {
 			transform.RotateAround (pivot, Vector3.up, 0.6f);
 		}
 		Vector3 desiredPosition = (transform.position - pivot).normalized * cameraDistance + pivot;
-        Debug.Log("Desired position: " + desiredPosition);
 		transform.position = Vector3.MoveTowards(transform.position, desiredPosition, 100f);
 		Camera.main.transform.LookAt (pivot);
 	}

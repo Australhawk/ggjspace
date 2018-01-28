@@ -19,6 +19,7 @@ public class RingController : MonoBehaviour {
         if (this.planet) {
             float diameter = this.planet.planetObject.planetRadius * 4;
             this.transform.localScale = new Vector3(diameter, diameter, diameter);
+            transform.LookAt(this.planet.transform);
         }
         if (active) {
             float distance = Vector3.Distance(this.transform.position, planet.transform.position);

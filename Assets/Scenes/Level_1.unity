@@ -152,10 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1146713988346854, guid: 2c27dcf7f9faf4098b70233d4a186d3c, type: 2}
-      propertyPath: m_TagString
-      value: Ring
-      objectReference: {fileID: 0}
     - target: {fileID: 114828269232112204, guid: 2c27dcf7f9faf4098b70233d4a186d3c,
         type: 2}
       propertyPath: planet
