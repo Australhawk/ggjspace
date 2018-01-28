@@ -27,7 +27,9 @@ public class Controller : MonoBehaviour {
                 Debug.Log("Previous");
                 GameManager.instance.PreviousPlanet();
             } else if (Input.GetButton("AddForce")) {
-                GameManager.instance.currentPlanet.GetComponent<Planet>().AddForce(force);
+				if (GameManager.instance.currentPlanet) {
+					GameManager.instance.currentPlanet.GetComponent<Planet> ().AddForce (force);
+				}
             }
 			if (MicTestManager.instance) {
 				float power = MicTestManager.instance.power;

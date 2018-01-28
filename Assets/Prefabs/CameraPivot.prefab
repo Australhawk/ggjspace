@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0920ab8e2e44e7cbe22f52f0861568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistance: 100
+  cameraDistance: 5
   cameraHeight: 5
   cameraSpeed: 2
   screenDistance: 100

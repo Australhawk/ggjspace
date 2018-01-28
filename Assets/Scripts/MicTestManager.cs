@@ -52,8 +52,7 @@ public class MicTestManager : MonoBehaviour {
 		float MAX_MULT = 100 / (maxLevel - minLevel);
 		float MAX_OFFSET = -MAX_MULT * minLevel + maxLevel;
 		float value =  loudness*MAX_MULT + MAX_OFFSET;
-		Debug.Log ("Power: " + value);
-        power = Mathf.Clamp(value, 0, 100);
+		power = Mathf.Clamp(value, 0, 100);
         return Mathf.Clamp(value,0,100);
 	}
 
