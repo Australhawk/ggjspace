@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class RingController : MonoBehaviour {
     public Planet planet;
+	public AudioClip successAudio;
 	private Animator animator;
+	private AudioSource sfx;
     bool active;
     bool finished;
 
 	// Use this for initialization
 	void Start () {
 		animator = transform.GetChild (0).GetComponent<Animator> ();
+		sfx = this.gameObject.AddComponent<AudioSource> ();
+		sfx.loop = false;
 	}
 	void PaintMaterial(Color color){
 		transform.GetChild (0).GetChild (1).GetComponent<Renderer> ().material.color = color;
@@ -37,6 +41,9 @@ public class RingController : MonoBehaviour {
         finished = true;
         planet.Finished = true;
         active = false;
+		sfx.clip = successAudio;
+		sfx.time = 0.4f;
+		sfx.Play ();
 		this.animator.SetBool ("PlanetOnPosition", true);
         GameManager.instance.NextPlanet();
 		this.PaintMaterial(Color.green);
