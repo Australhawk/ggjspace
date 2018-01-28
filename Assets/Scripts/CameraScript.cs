@@ -41,9 +41,9 @@ public class CameraScript : MonoBehaviour {
 		Vector3 pivot = this.currentSelectedPlanet.transform.position;
 		var mousePosition = Input.mousePosition;
         if (Input.GetKey(KeyCode.A)) {
-            transform.RotateAround(pivot, Vector3.down, 0.6f);
+            transform.RotateAround(pivot, Vector3.down, 1.2f);
 		} else if (Input.GetKey(KeyCode.D)) {
-			transform.RotateAround (pivot, Vector3.up, 0.6f);
+			transform.RotateAround (pivot, Vector3.up, 1.2f);
 		}
 		Vector3 desiredPosition = (transform.position - pivot).normalized * cameraDistance + pivot;
 		transform.position = Vector3.MoveTowards(transform.position, desiredPosition, 100f);

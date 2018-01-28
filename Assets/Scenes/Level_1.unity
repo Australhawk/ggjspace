@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04344748, g: 0.04184796, b: 0.044882335, a: 1}
+  m_IndirectSpecularColor: {r: 0.043447554, g: 0.041848034, b: 0.04488241, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -798,7 +798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4056322326827406, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.96
+      value: -72.1
       objectReference: {fileID: 0}
     - target: {fileID: 4056322326827406, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
       propertyPath: m_LocalRotation.x
@@ -819,24 +819,6 @@ Prefab:
     - target: {fileID: 4056322326827406, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697232231310074, guid: bee29574e9bf49f4bbd5669a7f939676,
-        type: 2}
-      propertyPath: cameraDistance
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295236617480750, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4295236617480750, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114697232231310074, guid: bee29574e9bf49f4bbd5669a7f939676,
-        type: 2}
-      propertyPath: cameraHeight
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
@@ -879,18 +861,6 @@ Prefab:
     - target: {fileID: 4428051646787214, guid: 9c44704ccd29b431d834541a1f5ae5d7, type: 2}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4975698946868192, guid: 9c44704ccd29b431d834541a1f5ae5d7, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4975698946868192, guid: 9c44704ccd29b431d834541a1f5ae5d7, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 4975698946868192, guid: 9c44704ccd29b431d834541a1f5ae5d7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c44704ccd29b431d834541a1f5ae5d7, type: 2}

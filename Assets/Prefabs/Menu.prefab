@@ -619,6 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63b2b81a82654629b21ec7ddca9139d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuOpen: {fileID: 8300000, guid: 33f5f7190771b4dc69112ffc0318df3d, type: 3}
+  menuClose: {fileID: 8300000, guid: 7c003537a57d6439cb4c2eea3180d90b, type: 3}
 --- !u!114 &114671307762232902
 MonoBehaviour:
   m_ObjectHideFlags: 1
