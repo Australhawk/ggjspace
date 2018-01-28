@@ -1655,6 +1655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3886c7dd8b964316bea9af955342129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickAudio: {fileID: 8300000, guid: f2511d921a8f143f1b9bb4d1809d60ef, type: 3}
+  power: 0
   dropdown: {fileID: 1785104289}
   slider: {fileID: 0}
   calibrateSlider: {fileID: 0}

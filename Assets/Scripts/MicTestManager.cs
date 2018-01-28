@@ -8,7 +8,8 @@ using System.Collections;
 public class MicTestManager : MonoBehaviour {
 
 	public static MicTestManager instance;
-
+	public AudioClip clickAudio;
+	private AudioSource sfx;
     public float power;
 	//Used in the menu to update visuals.
 	public TMP_Dropdown dropdown;
@@ -36,6 +37,9 @@ public class MicTestManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (dropdown != null) {
+			sfx = this.gameObject.AddComponent<AudioSource> ();
+			sfx.loop = false;
+			sfx.clip = clickAudio;
 			micInput = new MicInput ();
 			UpdateDropDownValues();
 			StartCoroutine (Speech ());
@@ -46,6 +50,7 @@ public class MicTestManager : MonoBehaviour {
 		UpdateSlider();
 	}
 	public void StartTesting(){
+		sfx.Play ();
 		start_testing = true;
 	}
 	public float GetPower(float loudness){
