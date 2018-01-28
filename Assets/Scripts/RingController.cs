@@ -13,6 +13,10 @@ public class RingController : MonoBehaviour {
 	void Start () {
 		animator = transform.GetChild (0).GetComponent<Animator> ();
 	}
+	void PaintMaterial(Color color){
+		transform.GetChild (0).GetChild (1).GetComponent<Renderer> ().material.color = color;
+		transform.GetChild (0).GetChild (2).GetComponent<Renderer> ().material.color = color;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -35,22 +39,21 @@ public class RingController : MonoBehaviour {
         active = false;
 		this.animator.SetBool ("PlanetOnPosition", true);
         GameManager.instance.NextPlanet();
-        this.GetComponent<Renderer>().material.color = Color.green;
+		this.PaintMaterial(Color.green);
         FindObjectOfType<RingManager>().RingFinished(this);
     }
 	public void PlanetEntered (Planet planet) {
         if (this.planet.Equals(planet)) {
             Debug.Log("Planet entered!");
 			this.animator.SetBool ("PlanetNear", true);
-            this.GetComponent<Renderer>().material.color = Color.yellow;
+			this.PaintMaterial(Color.yellow);
             active = true;
         }
-     }
-
+    }
     internal void PlanetExited(Planet planet) {
         if (this.planet.Equals(planet)) {
 			this.animator.SetBool ("PlanetNear", false);
-            this.GetComponent<Renderer>().material.color = Color.white;
+			this.PaintMaterial(Color.white);
             active = false;
         }
     }
