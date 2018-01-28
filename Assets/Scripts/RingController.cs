@@ -46,8 +46,9 @@ public class RingController : MonoBehaviour {
 		this.animator.SetBool ("PlanetOnPosition", true);
 		this.PaintMaterial(Color.green);
 		yield return new WaitForSeconds(2);
-		FindObjectOfType<RingManager>().RingFinished(this);
-		GameManager.instance.NextPlanet();
+		if (!FindObjectOfType<RingManager> ().RingFinished (this)) {
+			GameManager.instance.NextPlanet();
+		};
     }
 	public void PlanetEntered (Planet planet) {
         if (this.planet.Equals(planet)) {

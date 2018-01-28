@@ -28,18 +28,20 @@ public class RingManager : MonoBehaviour {
         }
     }
 
-    public void RingFinished(RingController ring) {
+    public bool RingFinished(RingController ring) {
         rings.Remove(ring);
-        Debug.Log(rings.Count);
-        if (rings.Count < 1) {
+		if (rings.Count < 1) {
             //WE FINISHED THE LEVEL!
             Debug.Log("LEVEL FINISHED :D");
             GameManager.instance.level += 1;
             if (GameManager.instance.level == 5) {
                 CustomSceneManager.ChangeScene("Ending");
+				return true;
             } else {
                 CustomSceneManager.ChangeScene("Level_" + GameManager.instance.level);
+				return true;
             }
         }
+		return false;
     }
 }
