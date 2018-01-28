@@ -35,13 +35,15 @@ public class CameraScript : MonoBehaviour {
 
 	void FollowPlanet ()
 	{
+        if (!GameManager.instance.playing) {
+            return;
+        }
 		Vector3 pivot = this.currentSelectedPlanet.transform.position;
 		var mousePosition = Input.mousePosition;
-
-		if (mousePosition.x < screenDistance) {
-			transform.RotateAround (pivot, Vector3.up, Mathf.Abs (mousePosition.x - screenDistance) / 100);
-		} else if (mousePosition.x > Screen.width - screenDistance) {
-			transform.RotateAround (pivot, Vector3.down, (mousePosition.x - Screen.width + screenDistance) / 100);
+        if (Input.GetKey(KeyCode.A)) {
+            transform.RotateAround(pivot, Vector3.down, 0.6f);
+		} else if (Input.GetKey(KeyCode.D)) {
+			transform.RotateAround (pivot, Vector3.up, 0.6f);
 		}
 		Vector3 desiredPosition = (transform.position - pivot).normalized * cameraDistance + pivot;
 		transform.position = Vector3.MoveTowards(transform.position, desiredPosition, 100f);

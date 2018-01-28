@@ -22,11 +22,6 @@ public class MenuManager : MonoBehaviour {
     void FixedUpdate() {
         UpdateSlider();
     }
-    public void Calibrate() {
-        MicrophoneReader.setMaxValue(calibrateSlider.value);
-        calibrateInput.text = calibrateSlider.value.ToString();
-    }
-
     private void UpdateSlider() {
         if (dropdown != null && slider != null) {
             float volume = MicrophoneInputManager.instance.MicrophoneReader.Volume;

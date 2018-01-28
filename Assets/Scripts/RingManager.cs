@@ -5,7 +5,7 @@ using UnityEngine;
 public class RingManager : MonoBehaviour {
     public List<RingController> rings;
     // Use this for initialization
-    void Start() {
+    void OnSceneEnter() {
         RegisterRings();
     }
 
@@ -14,7 +14,12 @@ public class RingManager : MonoBehaviour {
 
     }
 
-    void RegisterRings() {
+    public void RegisterRings() {
+        if (this.rings==null) {
+            this.rings = new List<RingController>();
+        } else {
+            this.rings.Clear();
+        }
         GameObject[] rings = GameObject.FindGameObjectsWithTag("Ring");
         foreach (GameObject gameObject in rings) {
             RingController ring = gameObject.GetComponent<RingController>();
@@ -30,7 +35,11 @@ public class RingManager : MonoBehaviour {
             //WE FINISHED THE LEVEL!
             Debug.Log("LEVEL FINISHED :D");
             GameManager.instance.level += 1;
-            CustomSceneManager.ChangeScene("Level_" + GameManager.instance.level);
+            if (GameManager.instance.level == 5) {
+                CustomSceneManager.ChangeScene("Ending");
+            } else {
+                CustomSceneManager.ChangeScene("Level_" + GameManager.instance.level);
+            }
         }
     }
 }

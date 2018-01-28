@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour {
 	public void Start(){
         GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
+        DontDestroyOnLoad(this);
     }
 	public void Toggle(){
         GameObject ob = GameObject.Find("Menu");
@@ -35,7 +36,9 @@ public class MainMenu : MonoBehaviour {
         Hide(GameObject.Find("VolumeMenu").GetComponent<CanvasGroup>());
     }
     public void Volume() {
-
+        Hide(GameObject.Find("OptionsMenu").GetComponent<CanvasGroup>());
+        Show(GameObject.Find("VolumeMenu").GetComponent<CanvasGroup>());
+        Hide(GameObject.Find("MainMenu").GetComponent<CanvasGroup>());
     }
 
 	public void Back() {

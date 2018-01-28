@@ -7,6 +7,7 @@ public class Planet : MonoBehaviour {
     // Import ScriptableObject Data
     public Vector3 initialPos;
     public PlanetObject planetObject;
+    public AudioClip lose;
     private bool finished;
     private Vector3 velocity;
     
@@ -56,10 +57,11 @@ public class Planet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
         if (finished) {
-            Rigidbody rigidbody = GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
         }
+        rigidbody.velocity *= 0.95f;
     }
 
     internal void Pause() {
@@ -72,7 +74,14 @@ public class Planet : MonoBehaviour {
         rigidbody.velocity = this.velocity;
     }
 
-
+    /**
+     * Lose check! :o
+     */ 
+    private void OnCollisionEnter(Collision collision) {
+        AudioSource asource = GameObject.Find("CameraPivot").GetComponent<AudioSource>();
+        asource.clip = lose;
+        asource.Play();
+    }
 
     void OnTriggerEnter(Collider other) {
         RingController rc = other.GetComponent<RingController>();
