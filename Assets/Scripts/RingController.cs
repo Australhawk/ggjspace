@@ -37,10 +37,7 @@ public class RingController : MonoBehaviour {
         this.GetComponent<Renderer>().material.color = Color.green;
         FindObjectOfType<RingManager>().RingFinished(this);
     }
-	private Animator GetAnimator(){
-		
-	}
-    public void PlanetEntered (Planet planet) {
+	public void PlanetEntered (Planet planet) {
         if (this.planet.Equals(planet)) {
             Debug.Log("Planet entered!");
 			this.animator.SetBool ("PlanetNear", true);
