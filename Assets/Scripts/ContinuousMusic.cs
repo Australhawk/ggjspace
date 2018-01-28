@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ContinuousMusic : MonoBehaviour {
 
@@ -28,6 +29,9 @@ public class ContinuousMusic : MonoBehaviour {
 	
 	void Update ()
     {
-		
+		if(SceneManager.GetActiveScene().name == "Ending")
+        {
+            Destroy(this.gameObject);
+        }
 	}
 }

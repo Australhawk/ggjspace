@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4750905034140542}
-  - component: {fileID: 65901147456271398}
   - component: {fileID: 114049636607199284}
+  - component: {fileID: 135207809016507120}
   m_Layer: 0
   m_Name: Level Boundaries
   m_TagString: Untagged
@@ -41,18 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &65901147456271398
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1370249779724398}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 400, y: 300, z: 400}
-  m_Center: {x: 0, y: 0, z: 50}
 --- !u!114 &114049636607199284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -64,3 +52,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412bb9bcfc0fea44d80eff951af37a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &135207809016507120
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370249779724398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 250
+  m_Center: {x: 0, y: 0, z: 0}
