@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Terroso
   m_EditorClassIdentifier: 
   planetName: Terroso
-  planetRadius: 150
+  planetRadius: 1
   texture: {fileID: 2800000, guid: fe1caba7d7fa941cb9d437c9a1880bdf, type: 3}
   normalMap: {fileID: 2800000, guid: 3bfb1eb982a5e4e2fa53e10d953dc990, type: 3}
   planetMass: 10

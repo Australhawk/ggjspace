@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Atlantis
   m_EditorClassIdentifier: 
   planetName: Atlantis
-  planetRadius: 0
+  planetRadius: 1
   texture: {fileID: 2800000, guid: a73f9b49728ac4fcb956309b31ca4082, type: 3}
   normalMap: {fileID: 2800000, guid: 85e0de26a50044443baabb6537901797, type: 3}
   planetMass: 10
