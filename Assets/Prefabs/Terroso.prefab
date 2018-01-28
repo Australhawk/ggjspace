@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4428051646787214}
   - component: {fileID: 114434069569372474}
-  - component: {fileID: 54887916185130106}
+  - component: {fileID: 54514115623793702}
   m_Layer: 0
   m_Name: Terroso
   m_TagString: Planet
@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418603334689796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.29, y: 0, z: 3.43}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 300, y: 300, z: 300}
   m_Children: []
   m_Father: {fileID: 4428051646787214}
@@ -114,7 +114,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1418603334689796}
   m_Mesh: {fileID: 4300000, guid: 7eada37f3a35e45aca676e7c91d0c2f5, type: 3}
---- !u!54 &54887916185130106
+--- !u!54 &54514115623793702
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

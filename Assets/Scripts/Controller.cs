@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,8 +9,13 @@ public class Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GameManager.instance.playing = true;
+        StartCoroutine(Cooldown(2));
 	}
+
+    private IEnumerator Cooldown(int v) {
+        yield return new WaitForSeconds(v);
+        GameManager.instance.playing = true;
+    }
 
     // Update is called once per frame
     void Update() {
@@ -23,6 +29,8 @@ public class Controller : MonoBehaviour {
             } else if (Input.GetButton("AddForce")) {
                 GameManager.instance.currentPlanet.GetComponent<Planet>().AddForce(force);
             }
+            float power = MicTestManager.instance.power;
+            GameManager.instance.currentPlanet.GetComponent<Planet>().AddForce(power);
         }
 		if (Input.GetButtonDown ("Menu")) {
 			GameObject.Find ("Menu").GetComponent<MainMenu> ().Toggle ();
