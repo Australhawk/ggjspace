@@ -8,6 +8,8 @@ using System.Collections;
 public class MicTestManager : MonoBehaviour {
 
 	public static MicTestManager instance;
+
+    public float power;
 	//Used in the menu to update visuals.
 	public TMP_Dropdown dropdown;
 	//public Dropdown dropdown;
@@ -20,6 +22,7 @@ public class MicTestManager : MonoBehaviour {
 	private float maxLevel;
 	private float minLevel;
 	private int micIndex;
+
 	void Awake() {
 		//For now, all mics will be loaded in, we should restrain this from happening in the menu screen later on.
 		if (instance != null) {
@@ -50,7 +53,8 @@ public class MicTestManager : MonoBehaviour {
 		float MAX_OFFSET = -MAX_MULT * minLevel + maxLevel;
 		float value =  loudness*MAX_MULT + MAX_OFFSET;
 		Debug.Log ("Power: " + value);
-		return Mathf.Clamp(value,0,100);
+        power = Mathf.Clamp(value, 0, 100);
+        return Mathf.Clamp(value,0,100);
 	}
 
 	private void UpdateSlider() {
