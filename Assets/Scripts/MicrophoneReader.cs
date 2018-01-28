@@ -27,6 +27,7 @@ public class MicrophoneReader {
                 float[] samples = new float[audioClip.samples * audioClip.channels];
                 audioClip.GetData(samples, 0);
                 float volume = MeanVolume(samples);
+				Debug.Log (volume);
                 if (!calibrating) {
                     volume = (volume * MAX_MULT);
                 }

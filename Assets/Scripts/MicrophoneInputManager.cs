@@ -47,11 +47,11 @@ public class MicrophoneInputManager : MonoBehaviour {
                 mic.StartMicrophone();
                 mic_readers.Add(mic);
             } catch (Exception e) {
-                Debug.LogError("WRONG MIC D:");
+				Debug.LogError("WRONG MIC D:" + e.ToString());
             }
             mic.StopMicrophone();
         }
-        UpdateMicrophoneReader(0);
+        //UpdateMicrophoneReader(0);
     }
 
     internal void InstantiateMicrophones() {

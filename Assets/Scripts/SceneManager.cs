@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneManager : MonoBehaviour {
+public class CustomSceneManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +16,6 @@ public class SceneManager : MonoBehaviour {
     }
 
     public static void ChangeScene(string name) {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(name);
+		Initiate.Fade (name, Color.black, 2.0f);
     }
 }

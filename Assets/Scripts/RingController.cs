@@ -47,7 +47,6 @@ public class RingController : MonoBehaviour {
 
     internal void PlanetExited(Planet planet) {
         if (this.planet.Equals(planet)) {
-            float planetRadius = planet.planetObject.planetRadius;
             this.GetComponent<Renderer>().material.color = Color.white;
             active = false;
         }

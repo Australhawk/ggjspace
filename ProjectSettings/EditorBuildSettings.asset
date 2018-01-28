@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: a08ac907aad82fc4490cc6731da2a2ff
+  - enabled: 1
+    path: Assets/Scenes/MicTest.unity
+    guid: 9da1a4f4748d34f8a96ba44adbcb79ae

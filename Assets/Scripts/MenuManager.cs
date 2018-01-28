@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class MenuManager : MonoBehaviour {
 
     //Used in the menu to update visuals.
-    public Dropdown dropdown;
+	public Dropdown dropdown;
     public Slider slider;
     public Slider calibrateSlider;
     public InputField calibrateInput;
@@ -62,7 +62,7 @@ public class MenuManager : MonoBehaviour {
         GameManager.instance.level = 1;
 		MicrophoneInputManager.instance.UnloadUnusedMicrophones();
 		this.gameObject.SetActive (false);
-        SceneManager.ChangeScene("Level_1");
+        CustomSceneManager.ChangeScene("Level_1");
     }
     public void SetSliderValue() {
         calibrateSlider.value = float.Parse(calibrateInput.text);
