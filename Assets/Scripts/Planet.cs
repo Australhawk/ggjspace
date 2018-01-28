@@ -73,9 +73,9 @@ public class Planet : MonoBehaviour {
      * Lose check! :o
      */ 
     private void OnCollisionEnter(Collision collision) {
-        AudioSource asource = GameObject.Find("CameraPivot").GetComponent<AudioSource>();
-        asource.clip = lose;
-        asource.Play();
+        //AudioSource asource = GameObject.Find("CameraPivot").GetComponent<AudioSource>();
+        //asource.clip = lose;
+        //asource.Play();
     }
 
     void OnTriggerEnter(Collider other) {
