@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faa80706bcd7466f972a072a4ab7df1, type: 3}
+  m_Name: Destrozeired
+  m_EditorClassIdentifier: 
+  planetName: Destrozeired
+  planetRadius: 1
+  texture: {fileID: 2800000, guid: 15bfdb6b00fd540d49d6904745c3d4bb, type: 3}
+  normalMap: {fileID: 2800000, guid: ab530f72ecc724735937054fb6b9f0d8, type: 3}
+  planetMass: 10

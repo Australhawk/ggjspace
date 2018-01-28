@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faa80706bcd7466f972a072a4ab7df1, type: 3}
+  m_Name: Atlantis
+  m_EditorClassIdentifier: 
+  planetName: Atlantis
+  planetRadius: 0
+  texture: {fileID: 2800000, guid: a73f9b49728ac4fcb956309b31ca4082, type: 3}
+  normalMap: {fileID: 2800000, guid: 85e0de26a50044443baabb6537901797, type: 3}
+  planetMass: 10

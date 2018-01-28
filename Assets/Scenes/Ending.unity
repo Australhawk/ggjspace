@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 71796825}
   - component: {fileID: 71796824}
   - component: {fileID: 71796823}
+  - component: {fileID: 71796827}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -194,6 +195,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71796827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71796822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bafdd61ff52634eb750bddfc7e6558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotX: 10
+  rotY: 5
+  rotZ: 10
 --- !u!1 &482206379
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,8 +509,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Wait...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -519,8 +534,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -602,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d8a214fe015f64daf0fd155fb2ceb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 854307467}
+  panel: {fileID: 0}
 --- !u!225 &1658736027
 CanvasGroup:
   m_ObjectHideFlags: 0

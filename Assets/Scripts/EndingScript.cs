@@ -37,19 +37,34 @@ public class EndingScript : MonoBehaviour {
         yield return new WaitForSeconds(4);
         text.text = "Well, I'm the one who has been looking at you all this time.";
         yield return new WaitForSeconds(4);
-        text.text = "You didn't think The Rings appeared magically out of nowhere did you?";
-        yield return new WaitForSeconds(4);
+        text.text = "You didn't think The Rings appeared magically out of nowhere, did you?";
+        yield return new WaitForSeconds(5);
         text.text = "Well, it's time for you to leave, I hope it was fun pretending to be God.";
-        yield return new WaitForSeconds(4);
-        text.text = "But in reality you're nothing but a mere human.";
-        yield return new WaitForSeconds(4);
-        text.text = "We seriously hope you had a great time, go back to your sad life.";
-        for(int i = 0; i < 100; i++) {
-            panel.GetComponent<Image>().color = new Color(0,0,0,i/100);
-            GetComponent<CanvasGroup>().alpha = 1-(i / 100);
-                yield return new WaitForSeconds(0.1f);
-        }
-        Application.Quit();
-        SceneManager.ChangeScene("Intro");
+        yield return new WaitForSeconds(5);
+        text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End.";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End.";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End.";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End.";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End.";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End";
+		yield return new WaitForSeconds(0.4f);
+		text.text = "The End?";
+		yield return new WaitForSeconds(1.5f);
+        CustomSceneManager.ChangeScene("Intro");
     }
 }

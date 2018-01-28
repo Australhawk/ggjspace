@@ -19,10 +19,25 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4025152234825818}
-  - component: {fileID: 33883905766560498}
-  - component: {fileID: 23153772173733610}
   - component: {fileID: 114712463224740898}
-  - component: {fileID: 135612125921153404}
+  m_Layer: 0
+  m_Name: Venenoso
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1738805432896478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4572850635061236}
+  - component: {fileID: 33127061601073576}
+  - component: {fileID: 23024995978297812}
+  - component: {fileID: 135972393097373300}
   m_Layer: 0
   m_Name: Venenoso
   m_TagString: Planet
@@ -36,19 +51,33 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1596668202257728}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -9, y: -0.1, z: -56.5}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4572850635061236}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23153772173733610
+--- !u!4 &4572850635061236
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738805432896478}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children: []
+  m_Father: {fileID: 4025152234825818}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23024995978297812
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596668202257728}
+  m_GameObject: {fileID: 1738805432896478}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,12 +106,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33883905766560498
+--- !u!33 &33127061601073576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596668202257728}
+  m_GameObject: {fileID: 1738805432896478}
   m_Mesh: {fileID: 4300000, guid: 65e745ff5b58a4a339a0e881e4483c00, type: 3}
 --- !u!114 &114712463224740898
 MonoBehaviour:
@@ -95,14 +124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6c01f8246974d8eb43daeb8caa320c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPos: {x: 0, y: 0, z: 0}
   planetObject: {fileID: 11400000, guid: 6628eaa0935ce497b9c276367bfb677b, type: 2}
-  planetPlaceholder: {fileID: 0}
---- !u!135 &135612125921153404
+  lose: {fileID: 8300000, guid: f14932840ae55494d810024994a2b86e, type: 3}
+--- !u!135 &135972393097373300
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596668202257728}
+  m_GameObject: {fileID: 1738805432896478}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

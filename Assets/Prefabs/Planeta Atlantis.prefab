@@ -9,75 +9,75 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1652632195434412}
+  m_RootGameObject: {fileID: 1657150217141800}
   m_IsPrefabParent: 1
---- !u!1 &1418603334689796
+--- !u!1 &1657150217141800
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4975698946868192}
-  - component: {fileID: 33217326088957694}
-  - component: {fileID: 23214864135182776}
-  - component: {fileID: 135119248580387924}
+  - component: {fileID: 4728693199044966}
+  - component: {fileID: 135898197174433124}
+  - component: {fileID: 114922112218681046}
   m_Layer: 0
-  m_Name: Terroso
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1652632195434412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4428051646787214}
-  - component: {fileID: 114434069569372474}
-  m_Layer: 0
-  m_Name: Terroso
+  m_Name: Planeta Atlantis
   m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4428051646787214
+--- !u!1 &1798259789040278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4154688290261170}
+  - component: {fileID: 33292305881438140}
+  - component: {fileID: 23563981418860732}
+  m_Layer: 0
+  m_Name: atlantis
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4154688290261170
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652632195434412}
+  m_GameObject: {fileID: 1798259789040278}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 150, y: 150, z: 150}
+  m_Children: []
+  m_Father: {fileID: 4728693199044966}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4728693199044966
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657150217141800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.02, y: 0, z: -10.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4975698946868192}
+  - {fileID: 4154688290261170}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4975698946868192
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1418603334689796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.29, y: 0, z: 3.43}
-  m_LocalScale: {x: 300, y: 300, z: 300}
-  m_Children: []
-  m_Father: {fileID: 4428051646787214}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23214864135182776
+--- !u!23 &23563981418860732
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1418603334689796}
+  m_GameObject: {fileID: 1798259789040278}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,7 +86,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ad70d24252a114aaa91972e4d23919ca, type: 2}
+  - {fileID: 2100000, guid: b8825461dcc2a4dcbab51a493894dd33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,36 +106,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33217326088957694
+--- !u!33 &33292305881438140
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1418603334689796}
-  m_Mesh: {fileID: 4300000, guid: 7eada37f3a35e45aca676e7c91d0c2f5, type: 3}
---- !u!114 &114434069569372474
+  m_GameObject: {fileID: 1798259789040278}
+  m_Mesh: {fileID: 4300002, guid: 9b8d8c71de4a644cdb7f621c6a63eb93, type: 3}
+--- !u!114 &114922112218681046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652632195434412}
+  m_GameObject: {fileID: 1657150217141800}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd6c01f8246974d8eb43daeb8caa320c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initialPos: {x: 0, y: 0, z: 0}
-  planetObject: {fileID: 11400000, guid: 563e8b8e4604141b7a85d7d8d4ddce4a, type: 2}
-  lose: {fileID: 0}
---- !u!135 &135119248580387924
+  planetObject: {fileID: 11400000, guid: ef70faa3acfed4530b7476e9d7dd56d7, type: 2}
+  lose: {fileID: 8300000, guid: f14932840ae55494d810024994a2b86e, type: 3}
+--- !u!135 &135898197174433124
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1418603334689796}
+  m_GameObject: {fileID: 1657150217141800}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.0146749895
-  m_Center: {x: -0.000055836048, y: 0.00015769665, z: -0.00049222575}
+  m_Radius: 1.56
+  m_Center: {x: 0, y: 0, z: 0}

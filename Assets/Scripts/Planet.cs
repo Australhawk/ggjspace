@@ -32,11 +32,6 @@ public class Planet : MonoBehaviour {
             float diameter = this.planetObject.planetRadius * 2f;
             this.transform.localScale = new Vector3(diameter, diameter, diameter);
         }
-        // Set Planet Material
-        if (this.planetObject.texture != null) {
-            GetComponent<Renderer>().material.SetTexture("_MainTex", this.planetObject.texture);
-            GetComponent<Renderer>().material.SetTexture("_BumpMap", this.planetObject.normalMap);
-        }
     }
 
     public void AddForce(float force) {
