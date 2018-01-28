@@ -29,8 +29,11 @@ public class Controller : MonoBehaviour {
             } else if (Input.GetButton("AddForce")) {
                 GameManager.instance.currentPlanet.GetComponent<Planet>().AddForce(force);
             }
-            float power = MicTestManager.instance.power;
-            GameManager.instance.currentPlanet.GetComponent<Planet>().AddForce(power);
+			if (MicTestManager.instance) {
+				float power = MicTestManager.instance.power;
+				GameManager.instance.currentPlanet.GetComponent<Planet> ().AddForce (power);
+			}
+            
         }
 		if (Input.GetButtonDown ("Menu")) {
 			GameObject.Find ("Menu").GetComponent<MainMenu> ().Toggle ();
