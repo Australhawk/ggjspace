@@ -823,7 +823,7 @@ Prefab:
     - target: {fileID: 114697232231310074, guid: bee29574e9bf49f4bbd5669a7f939676,
         type: 2}
       propertyPath: cameraDistance
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4295236617480750, guid: bee29574e9bf49f4bbd5669a7f939676, type: 2}
       propertyPath: m_LocalPosition.y
