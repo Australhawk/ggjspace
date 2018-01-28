@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
+	public AudioClip menuOpen;
+	public AudioClip menuClose;
+	private AudioSource sfx;
 	public void Start(){
         GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
         DontDestroyOnLoad(this);
+		sfx = this.gameObject.AddComponent<AudioSource> ();
+		sfx.loop = false;
     }
 	public void Toggle(){
         GameObject ob = GameObject.Find("Menu");
@@ -22,6 +27,13 @@ public class MainMenu : MonoBehaviour {
                 }
             }
             GameManager.instance.playing = !set;
+			if (set) {
+				sfx.clip = menuOpen;
+			}else{
+				sfx.clip = menuClose;
+			}
+			sfx.time = 0.65f;
+			sfx.Play();
         } else {
             GameObject.Find("Menu").GetComponent<Canvas>().enabled = false;
         }
