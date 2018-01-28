@@ -23,7 +23,7 @@ public class MenuManager : MonoBehaviour {
         UpdateSlider();
     }
     public void Calibrate() {
-        MicrophoneReader.setMaxValue(calibrateSlider.value);
+        MicrophoneReader.SetMaxValue(calibrateSlider.value);
         calibrateInput.text = calibrateSlider.value.ToString();
     }
 

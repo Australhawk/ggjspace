@@ -56,10 +56,11 @@ public class Planet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
         if (finished) {
-            Rigidbody rigidbody = GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
         }
+        rigidbody.velocity *= 0.95f;
     }
 
     internal void Pause() {

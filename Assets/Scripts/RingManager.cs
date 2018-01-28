@@ -35,7 +35,11 @@ public class RingManager : MonoBehaviour {
             //WE FINISHED THE LEVEL!
             Debug.Log("LEVEL FINISHED :D");
             GameManager.instance.level += 1;
-            SceneManager.ChangeScene("Level_" + GameManager.instance.level);
+            if (GameManager.instance.level == 5) {
+                SceneManager.ChangeScene("Ending");
+            } else {
+                SceneManager.ChangeScene("Level_" + GameManager.instance.level);
+            }
         }
     }
 }

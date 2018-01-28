@@ -123,7 +123,7 @@ public class MicrophoneReader {
             power = value;
         }
     }
-    public static void setMaxValue(float max_value) {
+    public static void SetMaxValue(float max_value) {
         MAX_MULT = max_value;
     }
 }
