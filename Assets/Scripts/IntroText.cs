@@ -16,7 +16,7 @@ public class IntroText : MonoBehaviour {
 	
 	IEnumerator ShowText(){
 		var text = GetComponent<TextMeshProUGUI> ();
-		text.text = "At the beginning, there was nothing";
+		text.text = "In the beginning, there was nothing";
 		yield return new WaitForSeconds (4);
 		text.text = "Not event a rock, a sun or a human";
 		yield return new WaitForSeconds (4);
